@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>log-parser plugin page</title>
+		<link type="text/css" rel="stylesheet" href="http://10.160.67.195:8080/jenkins/css/style.css" />
+		<link type="text/css" rel="stylesheet" href="http://10.160.67.195:8080/jenkins/css/color.css" />
+	</head>
+	<body>
+<pre>Started by upstream project "Build-USASSV (MasterJob)" build number 3
+originally caused by:
+ Started by user admin
+[EnvInject] - Loading node environment variables.
+Building in workspace /home/jenkins/yocto-jenkins/poky
+[poky] $ /bin/bash /home/jenkins/jenkins-2.138.1-0/apache-tomcat/temp/jenkins4160316100842507510.sh
+Starting package server...
+[sudo] password for jenkins: PID: 4425
+
+### Shell environment set up for builds. ###
+
+You can now run 'bitbake &lt;target&gt;'
+
+Common targets are:
+    core-image-minimal
+    core-image-sato
+    meta-toolchain
+    meta-ide-support
+
+You can also run generated qemu images with a command like 'runqemu qemux86'
+Removing stale pidfile /home/jenkins/yocto-jenkins/poky/twistd.pid
+2018-09-20 12:39:07-0400 [-] Log opened.
+2018-09-20 12:39:07-0400 [-] twistd 16.0.0 (/usr/bin/python 2.7.12) starting up.
+2018-09-20 12:39:07-0400 [-] reactor class: twisted.internet.epollreactor.EPollReactor.
+2018-09-20 12:39:07-0400 [-] Site starting on 5678
+2018-09-20 12:39:07-0400 [-] Starting factory &lt;twisted.web.server.Site instance at 0x7fbdd4a73050&gt;
+Loading cache...done.
+Loaded 3257 entries from dependency cache.
+Parsing recipes...done.
+Parsing of 2383 .bb files complete (2376 cached, 7 parsed). 3264 targets, 148 skipped, 0 masked, 0 errors.
+<a name="WARNING1"></a><span style="color:orange">WARNING: No recipes available for:</span>
+  /home/jenkins/yocto-jenkins/poky/meta-petalinux/recipes-extended/images/xen-image-minimal.bbappend
+  /home/jenkins/yocto-jenkins/poky/meta-petalinux/recipes-extended/xen/xen_git.bbappend
+NOTE: Resolving any missing task queue dependencies
+
+Build Configuration:
+BB_VERSION           = "1.36.0"
+BUILD_SYS            = "x86_64-linux"
+NATIVELSBSTRING      = "universal"
+TARGET_SYS           = "arm-poky-linux-gnueabi"
+MACHINE              = "usassv-zynq7"
+DISTRO               = "poky"
+DISTRO_VERSION       = "2.4.3"
+TUNE_FEATURES        = "arm armv7a vfp thumb neon callconvention-hard cortexa9"
+TARGET_FPU           = "hard"
+meta                 
+meta-poky            
+meta-yocto-bsp       = "HEAD:05711ba18587aaaf4a9c465a1dd4537f27ceda93"
+meta-xilinx-bsp      
+meta-xilinx-contrib  = "HEAD:e7a6531bd8fc9ce5797be082c8478a2701c3766a"
+meta-xilinx-tools    = "HEAD:93d6b87bdc451ee81d6d716809e0d7e9bc3b7021"
+meta-qt5             = "HEAD:682ad61c071a9710e9f9d8a32ab1b5f3c14953d1"
+meta-perl            
+meta-python          
+meta-filesystems     
+meta-gnome           
+meta-multimedia      
+meta-networking      
+meta-webserver       
+meta-xfce            
+meta-initramfs       
+meta-oe              = "HEAD:eae996301d9c097bcbeb8046f08041dc82bb62f8"
+meta-petalinux       = "HEAD:4e84d60865bf505d1ea425f3e5c84e37bf8f7455"
+meta-ngus            = "HEAD:613a91bfec8c1b9f5f304339100e9b34846ca55e"
+
+Initialising tasks...done.
+NOTE: Executing SetScene Tasks
+NOTE: Executing RunQueue Tasks
+NOTE: Running task 4124 of 4858 (/home/jenkins/yocto-jenkins/poky/meta-ngus/recipes-ngus/images/usas-antx.bb:do_rootfs)
+NOTE: Running task 4221 of 4858 (/home/jenkins/yocto-jenkins/poky/meta/recipes-core/meta/package-index.bb:do_package_index)
+NOTE: recipe package-index-1.0-r0: task do_package_index: Started
+NOTE: recipe usas-antx-1.0-r0: task do_rootfs: Started
+NOTE: recipe package-index-1.0-r0: task do_package_index: Succeeded
+NOTE: Running noexec task 4852 of 4858 (/home/jenkins/yocto-jenkins/poky/meta/recipes-core/meta/package-index.bb:do_build)
+2018-09-20 12:43:45-0400 [-] 192.168.1.112 - - [20/Sep/2018:16:43:44 +0000] "GET /repodata/repomd.xml HTTP/1.1" 200 3103 "-" "dnf/2.6.3"
+2018-09-20 12:43:45-0400 [-] 192.168.1.112 - - [20/Sep/2018:16:43:44 +0000] "GET /repodata/c6b804c7d5d3c42b1c2328bd331def9ef279b3d9c316b8b9a07beb1a7ab71133-primary.xml.gz HTTP/1.1" 200 605234 "-" "dnf/2.6.3"
+2018-09-20 12:43:45-0400 [-] 192.168.1.112 - - [20/Sep/2018:16:43:44 +0000] "GET /repodata/c653579d2180147e452a4b0d924e8a4b97c25f868d82ff89922596dee72ef90b-filelists.xml.gz HTTP/1.1" 200 984799 "-" "dnf/2.6.3"
+<a name="WARNING2"></a><span style="color:orange">WARNING: usas-antx-1.0-r0 do_rootfs: The license listed BSL was not in the licenses collected for recipe dlib</span>
+NOTE: recipe usas-antx-1.0-r0: task do_rootfs: Succeeded
+NOTE: Running task 4853 of 4858 (/home/jenkins/yocto-jenkins/poky/meta-ngus/recipes-ngus/images/usas-antx.bb:do_image_qa)
+NOTE: recipe usas-antx-1.0-r0: task do_image_qa: Started
+NOTE: recipe usas-antx-1.0-r0: task do_image_qa: Succeeded
+NOTE: Running task 4854 of 4858 (/home/jenkins/yocto-jenkins/poky/meta-ngus/recipes-ngus/images/usas-antx.bb:do_image)
+NOTE: recipe usas-antx-1.0-r0: task do_image: Started
+NOTE: recipe usas-antx-1.0-r0: task do_image: Succeeded
+NOTE: Running task 4855 of 4858 (/home/jenkins/yocto-jenkins/poky/meta-ngus/recipes-ngus/images/usas-antx.bb:do_image_tar)
+NOTE: Running task 4856 of 4858 (/home/jenkins/yocto-jenkins/poky/meta-ngus/recipes-ngus/images/usas-antx.bb:do_image_cpio)
+NOTE: recipe usas-antx-1.0-r0: task do_image_tar: Started
+NOTE: recipe usas-antx-1.0-r0: task do_image_cpio: Started
+NOTE: recipe usas-antx-1.0-r0: task do_image_tar: Succeeded
+NOTE: recipe usas-antx-1.0-r0: task do_image_cpio: Succeeded
+NOTE: Running task 4857 of 4858 (/home/jenkins/yocto-jenkins/poky/meta-ngus/recipes-ngus/images/usas-antx.bb:do_image_complete)
+NOTE: recipe usas-antx-1.0-r0: task do_image_complete: Started
+NOTE: recipe usas-antx-1.0-r0: task do_image_complete: Succeeded
+NOTE: Running noexec task 4858 of 4858 (/home/jenkins/yocto-jenkins/poky/meta-ngus/recipes-ngus/images/usas-antx.bb:do_build)
+NOTE: Tasks Summary: Attempted 4858 tasks of which 4849 didn't need to be rerun and all succeeded.
+
+<a name="WARNING3"></a><span style="color:orange">Summary: There were 2 WARNING messages shown.</span>
+Process leaked file descriptors. See https://jenkins.io/redirect/troubleshooting/process-leaked-file-descriptors for more information
+Archiving artifacts
+</pre>	</body>
+</html>

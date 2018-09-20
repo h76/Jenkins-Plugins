@@ -1,0 +1,36 @@
+Started by upstream project "[8mha:////4JqjGUEA+NjB65Lrxi2+8+IrW9z1za0oTOeASHITN6UBAAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyJEgYF/az8JH2n0sycFN3QYMfg4DBVIwMN38TiktQir/wkTX0AOmAXj9UAAAA=[0mBuild-USASSV (MasterJob)" build number [8mha:////4PzojL6j9pX+isKXQzaNnTchyW5IOR4HJuPUoLN3twBiAAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBkX9rPwkfafSzJwU3dBgx+DgMFUjAw3fxOKS1CKv/CRNfUMAj5a3X9YAAAA=[0m1
+originally caused by:
+ Started by user [8mha:////4J4kci7bVE7VxIi01MHG3nd8n1XMfnBAlWUkb7RxEqJmAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgYe/dLi1CL9nIz89MQ8AAugMCbBAAAA[0madmin
+[EnvInject] - Loading node environment variables.
+Building in workspace /home/jenkins/yocto-jenkins
+[yocto-jenkins] $ /bin/bash /home/jenkins/jenkins-2.138.1-0/apache-tomcat/temp/jenkins7978683571444107784.sh
+mkdir: cannot create directory ‘yocto_downloads’: File exists
+You had no conf/local.conf file. This configuration file has therefore been
+created for you with some default values. You may wish to edit it to, for
+example, select a different MACHINE (target hardware). See conf/local.conf
+for more information as common configuration options are commented.
+
+You had no conf/bblayers.conf file. This configuration file has therefore been
+created for you with some default values. To add additional metadata layers
+into your configuration please add entries to conf/bblayers.conf.
+
+The Yocto Project has extensive documentation about OE including a reference
+manual which can be found at:
+    http://yoctoproject.org/documentation
+
+For more information about OpenEmbedded see their website:
+    http://www.openembedded.org/
+
+
+### Shell environment set up for builds. ###
+
+You can now run 'bitbake <target>'
+
+Common targets are:
+    core-image-minimal
+    core-image-sato
+    meta-toolchain
+    meta-ide-support
+
+You can also run generated qemu images with a command like 'runqemu qemux86'
+Finished: SUCCESS

@@ -1,0 +1,130 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <com.tikal.jenkins.plugins.multijob.MultiJobParametersAction plugin="jenkins-multijob-plugin@1.31">
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>START_PKG_SERVER</name>
+          <value>true</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>MACHINE</name>
+          <value>usassv-zynq7</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>BUILD</name>
+          <value>build-sv</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>TARGET_IMAGE</name>
+          <description></description>
+          <value>usas-antx</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>ARCHIVE_DIR</name>
+          <description></description>
+          <value>${BUILD}/tmp/deploy/images/${MACHINE}</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>START_PKG_SERVER</string>
+        <string>MACHINE</string>
+        <string>BUILD</string>
+        <string>TARGET_IMAGE</string>
+        <string>ARCHIVE_DIR</string>
+      </parameterDefinitionNames>
+      <parameters class="java.util.Arrays$ArrayList" defined-in="com.tikal.jenkins.plugins.multijob.MultiJobParametersAction">
+        <a class="hudson.model.ParameterValue-array">
+          <hudson.model.StringParameterValue reference="../../../parameters/hudson.model.StringParameterValue"/>
+          <hudson.model.StringParameterValue reference="../../../parameters/hudson.model.StringParameterValue[2]"/>
+          <hudson.model.StringParameterValue reference="../../../parameters/hudson.model.StringParameterValue[3]"/>
+          <hudson.model.StringParameterValue reference="../../../parameters/hudson.model.StringParameterValue[4]"/>
+          <hudson.model.StringParameterValue reference="../../../parameters/hudson.model.StringParameterValue[5]"/>
+        </a>
+      </parameters>
+    </com.tikal.jenkins.plugins.multijob.MultiJobParametersAction>
+    <com.tikal.jenkins.plugins.multijob.MultiJobBuilder_-MultiJobAction plugin="jenkins-multijob-plugin@1.31">
+      <buildNumber>3</buildNumber>
+      <index>1</index>
+      <outer-class>
+        <phaseName>Build Yocto (usassv)</phaseName>
+        <phaseJobs>
+          <com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+            <jobName>build-yocto</jobName>
+            <jobAlias>usassv</jobAlias>
+            <currParams>false</currParams>
+            <aggregatedTestResults>false</aggregatedTestResults>
+            <exposedSCM>false</exposedSCM>
+            <disableJob>false</disableJob>
+            <parsingRulesPath></parsingRulesPath>
+            <maxRetries>0</maxRetries>
+            <enableRetryStrategy>false</enableRetryStrategy>
+            <enableCondition>true</enableCondition>
+            <abortAllJob>true</abortAllJob>
+            <condition>&quot;${BUILD}&quot; == &quot;true&quot;</condition>
+            <configs>
+              <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters plugin="parameterized-trigger@2.35.2">
+                <properties>START_PKG_SERVER=${START_PKG_SERVER}
+MACHINE=usassv-zynq7
+BUILD=build-sv</properties>
+                <textParamValueOnNewLine>false</textParamValueOnNewLine>
+              </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+            </configs>
+            <killPhaseOnJobResultCondition>FAILURE</killPhaseOnJobResultCondition>
+            <buildOnlyIfSCMChanges>false</buildOnlyIfSCMChanges>
+            <applyConditionOnlyIfNoSCMChanges>false</applyConditionOnlyIfNoSCMChanges>
+          </com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+        </phaseJobs>
+        <continuationCondition>SUCCESSFUL</continuationCondition>
+        <executionType>SEQUENTIALLY</executionType>
+      </outer-class>
+    </com.tikal.jenkins.plugins.multijob.MultiJobBuilder_-MultiJobAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UpstreamCause>
+            <upstreamProject>Build-USASSV (MasterJob)</upstreamProject>
+            <upstreamUrl>job/Build-USASSV%20(MasterJob)/</upstreamUrl>
+            <upstreamBuild>3</upstreamBuild>
+            <upstreamCauses>
+              <hudson.model.Cause_-UserIdCause>
+                <userId>lhogan</userId>
+              </hudson.model.Cause_-UserIdCause>
+            </upstreamCauses>
+          </hudson.model.Cause_-UpstreamCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.envinject.EnvInjectPluginAction plugin="envinject@2.1.6"/>
+    <hudson.plugins.logparser.LogParserAction plugin="log-parser@2.0">
+      <build class="build" reference="../../.."/>
+      <result>
+        <totalErrors>0</totalErrors>
+        <totalWarnings>3</totalWarnings>
+        <totalInfos>0</totalInfos>
+        <htmlLogFile>/home/jenkins/jenkins-2.138.1-0/apps/jenkins/jenkins_home/jobs/build-yocto/builds/8/log_content.html</htmlLogFile>
+        <errorLinksFile>/home/jenkins/jenkins-2.138.1-0/apps/jenkins/jenkins_home/jobs/build-yocto/builds/8/logerrorLinks.html</errorLinksFile>
+        <warningLinksFile>/home/jenkins/jenkins-2.138.1-0/apps/jenkins/jenkins_home/jobs/build-yocto/builds/8/logwarningLinks.html</warningLinksFile>
+        <infoLinksFile>/home/jenkins/jenkins-2.138.1-0/apps/jenkins/jenkins_home/jobs/build-yocto/builds/8/loginfoLinks.html</infoLinksFile>
+        <parsedLogURL>job/build-yocto/8/parsed_console/log.html</parsedLogURL>
+        <htmlLogPath>/home/jenkins/jenkins-2.138.1-0/apps/jenkins/jenkins_home/jobs/build-yocto/builds/8</htmlLogPath>
+      </result>
+    </hudson.plugins.logparser.LogParserAction>
+  </actions>
+  <queueId>51</queueId>
+  <timestamp>1537461547417</timestamp>
+  <startTime>1537461547430</startTime>
+  <result>SUCCESS</result>
+  <description>Successful build of usas-sv with artifacts</description>
+  <displayName>build-usassv</displayName>
+  <duration>303168</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/home/jenkins/yocto-jenkins/poky</workspace>
+  <hudsonVersion>2.138.1</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

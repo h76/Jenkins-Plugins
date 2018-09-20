@@ -1,0 +1,27 @@
+Started by upstream project "[8mha:////4B4Jd4mi0vDiUVnqnBnS6i7b0FqJn5/j4oOlMVtY4rajAAAAsB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyZEgYV/az8JP3QgpTEklTdyPzkknxd17wyVSMDDd/E4pLUIq/8JE19AOybJGnZAAAA[0mUpdate-Yocto-Env (MasterJob)" build number [8mha:////4OieR17djUwXVAkuz87NVcBIpt6ku+YS89vS1ITeU5SRAAAAsB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBlX9rPwk/dCClMSSVN3I/OSSfF3XvDJVIwMN38TiktQir/wkTX1TADcmzinaAAAA[0m5
+originally caused by:
+ Started by user [8mha:////4J4kci7bVE7VxIi01MHG3nd8n1XMfnBAlWUkb7RxEqJmAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgYe/dLi1CL9nIz89MQ8AAugMCbBAAAA[0madmin
+[EnvInject] - Loading node environment variables.
+Building in workspace /home/jenkins/yocto-jenkins/poky
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git config remote.origin.url https://github.com/meta-qt5/meta-qt5.git # timeout=10
+Fetching upstream changes from https://github.com/meta-qt5/meta-qt5.git
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git --version # timeout=10
+Setting http proxy: 134.223.116.152:80
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git fetch --tags --progress https://github.com/meta-qt5/meta-qt5.git +refs/heads/*:refs/remotes/origin/*
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git rev-parse origin/rocko^{commit} # timeout=10
+Checking out Revision 682ad61c071a9710e9f9d8a32ab1b5f3c14953d1 (origin/rocko)
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git config core.sparsecheckout # timeout=10
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git checkout -f 682ad61c071a9710e9f9d8a32ab1b5f3c14953d1
+Commit message: "qt: upgrade to 5.9.6"
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git rev-list --no-walk eae996301d9c097bcbeb8046f08041dc82bb62f8 # timeout=10
+First time build. Skipping changelog.
+[poky] $ /bin/sh -xe /home/jenkins/jenkins-2.138.1-0/apache-tomcat/temp/jenkins6059588935697617068.sh
++ echo https://github.com/meta-qt5/meta-qt5.git
+https://github.com/meta-qt5/meta-qt5.git
++ echo rocko
+rocko
++ echo /home/jenkins/yocto-jenkins/poky/meta-qt5
+/home/jenkins/yocto-jenkins/poky/meta-qt5
+Finished: SUCCESS

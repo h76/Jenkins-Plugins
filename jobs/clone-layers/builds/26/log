@@ -1,0 +1,33 @@
+Started by upstream project "[8mha:////4B4Jd4mi0vDiUVnqnBnS6i7b0FqJn5/j4oOlMVtY4rajAAAAsB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyZEgYV/az8JP3QgpTEklTdyPzkknxd17wyVSMDDd/E4pLUIq/8JE19AOybJGnZAAAA[0mUpdate-Yocto-Env (MasterJob)" build number [8mha:////4OieR17djUwXVAkuz87NVcBIpt6ku+YS89vS1ITeU5SRAAAAsB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBlX9rPwk/dCClMSSVN3I/OSSfF3XvDJVIwMN38TiktQir/wkTX1TADcmzinaAAAA[0m5
+originally caused by:
+ Started by user [8mha:////4J4kci7bVE7VxIi01MHG3nd8n1XMfnBAlWUkb7RxEqJmAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgYe/dLi1CL9nIz89MQ8AAugMCbBAAAA[0madmin
+[EnvInject] - Loading node environment variables.
+Building in workspace /home/jenkins/yocto-jenkins/poky
+Cloning the remote Git repository
+Cloning repository https://github.com/Xilinx/meta-xilinx-tools.git
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git init /home/jenkins/yocto-jenkins/poky/meta-xilinx-tools # timeout=10
+Fetching upstream changes from https://github.com/Xilinx/meta-xilinx-tools.git
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git --version # timeout=10
+Setting http proxy: 134.223.116.152:80
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git fetch --tags --progress https://github.com/Xilinx/meta-xilinx-tools.git +refs/heads/*:refs/remotes/origin/*
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git config remote.origin.url https://github.com/Xilinx/meta-xilinx-tools.git # timeout=10
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git config remote.origin.url https://github.com/Xilinx/meta-xilinx-tools.git # timeout=10
+Fetching upstream changes from https://github.com/Xilinx/meta-xilinx-tools.git
+Setting http proxy: 134.223.116.152:80
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git fetch --tags --progress https://github.com/Xilinx/meta-xilinx-tools.git +refs/heads/*:refs/remotes/origin/*
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git rev-parse origin/rel-v2018.1^{commit} # timeout=10
+Checking out Revision 93d6b87bdc451ee81d6d716809e0d7e9bc3b7021 (origin/rel-v2018.1)
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git config core.sparsecheckout # timeout=10
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git checkout -f 93d6b87bdc451ee81d6d716809e0d7e9bc3b7021
+Commit message: "pmu-firmware_git.bb: Remove shutdown related macros to pmufw bbapend"
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git rev-list --no-walk e7a6531bd8fc9ce5797be082c8478a2701c3766a # timeout=10
+First time build. Skipping changelog.
+[poky] $ /bin/sh -xe /home/jenkins/jenkins-2.138.1-0/apache-tomcat/temp/jenkins6663735442667293318.sh
++ echo https://github.com/Xilinx/meta-xilinx-tools.git
+https://github.com/Xilinx/meta-xilinx-tools.git
++ echo rel-v2018.1
+rel-v2018.1
++ echo /home/jenkins/yocto-jenkins/poky/meta-xilinx-tools
+/home/jenkins/yocto-jenkins/poky/meta-xilinx-tools
+Finished: SUCCESS

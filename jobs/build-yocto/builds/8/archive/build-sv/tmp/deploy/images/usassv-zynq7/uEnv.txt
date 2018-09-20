@@ -1,0 +1,12 @@
+kernel_image=uImage
+loadbit=fatload mmc 0 0x4000000 usas_sv.bit && fpga loadb 0 0x4000000 ${filesize}
+kernel_load_address=0x2080000
+loadkernel=fatload mmc 0 ${kernel_load_address} ${kernel_image}
+machine_name=usassv-zynq7
+devicetree_load_address=0x2000000
+bootkernel=run loadbit && run loadkernel && run loaddtb && bootm ${kernel_load_address} - ${devicetree_load_address}
+uenvcmd=run bootkernel
+fdt_high=0xFFFFFFFF
+loaddtb=fatload mmc 0 ${devicetree_load_address} ${devicetree_image}
+bootargs=earlyprintk console=ttyPS0,115200 mem=1024M root=/dev/mmcblk0p2 rw rootwait cma=128M
+devicetree_image=usassv-zynq7-system.dtb

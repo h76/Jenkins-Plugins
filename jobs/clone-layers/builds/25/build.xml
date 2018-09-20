@@ -1,0 +1,323 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <com.tikal.jenkins.plugins.multijob.MultiJobParametersAction plugin="jenkins-multijob-plugin@1.31">
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>GIT_REPO</name>
+          <value>https://github.com/Xilinx/meta-xilinx.git</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>GIT_BRANCH</name>
+          <value>rel-v2018.1</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>GIT_SUBDIR</name>
+          <value>/home/jenkins/yocto-jenkins/poky/meta-xilinx</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>GIT_REPO</string>
+        <string>GIT_BRANCH</string>
+        <string>GIT_SUBDIR</string>
+      </parameterDefinitionNames>
+      <parameters class="java.util.Arrays$ArrayList" defined-in="com.tikal.jenkins.plugins.multijob.MultiJobParametersAction">
+        <a class="hudson.model.ParameterValue-array">
+          <hudson.model.StringParameterValue reference="../../../parameters/hudson.model.StringParameterValue"/>
+          <hudson.model.StringParameterValue reference="../../../parameters/hudson.model.StringParameterValue[2]"/>
+          <hudson.model.StringParameterValue reference="../../../parameters/hudson.model.StringParameterValue[3]"/>
+        </a>
+      </parameters>
+    </com.tikal.jenkins.plugins.multijob.MultiJobParametersAction>
+    <com.tikal.jenkins.plugins.multijob.MultiJobBuilder_-MultiJobAction plugin="jenkins-multijob-plugin@1.31">
+      <buildNumber>5</buildNumber>
+      <index>6</index>
+      <outer-class>
+        <phaseName>Clone Layers</phaseName>
+        <phaseJobs>
+          <com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+            <jobName>clone-layers</jobName>
+            <jobAlias>poky</jobAlias>
+            <currParams>false</currParams>
+            <aggregatedTestResults>false</aggregatedTestResults>
+            <exposedSCM>false</exposedSCM>
+            <disableJob>false</disableJob>
+            <parsingRulesPath></parsingRulesPath>
+            <maxRetries>0</maxRetries>
+            <enableRetryStrategy>false</enableRetryStrategy>
+            <enableCondition>false</enableCondition>
+            <abortAllJob>true</abortAllJob>
+            <condition></condition>
+            <configs>
+              <hudson.plugins.parameterizedtrigger.CurrentBuildParameters plugin="parameterized-trigger@2.35.2"/>
+            </configs>
+            <killPhaseOnJobResultCondition>FAILURE</killPhaseOnJobResultCondition>
+            <buildOnlyIfSCMChanges>false</buildOnlyIfSCMChanges>
+            <applyConditionOnlyIfNoSCMChanges>false</applyConditionOnlyIfNoSCMChanges>
+          </com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+          <com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+            <jobName>clone-layers</jobName>
+            <jobAlias>meta-ngus</jobAlias>
+            <currParams>false</currParams>
+            <aggregatedTestResults>false</aggregatedTestResults>
+            <exposedSCM>false</exposedSCM>
+            <disableJob>false</disableJob>
+            <parsingRulesPath></parsingRulesPath>
+            <maxRetries>0</maxRetries>
+            <enableRetryStrategy>false</enableRetryStrategy>
+            <enableCondition>false</enableCondition>
+            <abortAllJob>true</abortAllJob>
+            <condition></condition>
+            <configs>
+              <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters plugin="parameterized-trigger@2.35.2">
+                <properties>GIT_REPO=https://github.ms.northgrum.com/undersea/meta-ngus.git
+GIT_BRANCH=unit_tests_yocto_deploy_47
+GIT_SUBDIR=${WORKSPACE}/meta-ngus</properties>
+                <textParamValueOnNewLine>false</textParamValueOnNewLine>
+              </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+            </configs>
+            <killPhaseOnJobResultCondition>FAILURE</killPhaseOnJobResultCondition>
+            <buildOnlyIfSCMChanges>false</buildOnlyIfSCMChanges>
+            <applyConditionOnlyIfNoSCMChanges>false</applyConditionOnlyIfNoSCMChanges>
+          </com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+          <com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+            <jobName>clone-layers</jobName>
+            <jobAlias>meta-openembedded</jobAlias>
+            <currParams>false</currParams>
+            <aggregatedTestResults>false</aggregatedTestResults>
+            <exposedSCM>false</exposedSCM>
+            <disableJob>false</disableJob>
+            <parsingRulesPath></parsingRulesPath>
+            <maxRetries>0</maxRetries>
+            <enableRetryStrategy>false</enableRetryStrategy>
+            <enableCondition>false</enableCondition>
+            <abortAllJob>true</abortAllJob>
+            <condition></condition>
+            <configs>
+              <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters plugin="parameterized-trigger@2.35.2">
+                <properties>GIT_REPO=https://github.com/openembedded/meta-openembedded.git
+GIT_BRANCH=rocko
+GIT_SUBDIR=${WORKSPACE}/meta-openembedded</properties>
+                <textParamValueOnNewLine>false</textParamValueOnNewLine>
+              </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+            </configs>
+            <killPhaseOnJobResultCondition>FAILURE</killPhaseOnJobResultCondition>
+            <buildOnlyIfSCMChanges>false</buildOnlyIfSCMChanges>
+            <applyConditionOnlyIfNoSCMChanges>false</applyConditionOnlyIfNoSCMChanges>
+          </com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+          <com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+            <jobName>clone-layers</jobName>
+            <jobAlias>meta-petalinux</jobAlias>
+            <currParams>false</currParams>
+            <aggregatedTestResults>false</aggregatedTestResults>
+            <exposedSCM>false</exposedSCM>
+            <disableJob>false</disableJob>
+            <parsingRulesPath></parsingRulesPath>
+            <maxRetries>0</maxRetries>
+            <enableRetryStrategy>false</enableRetryStrategy>
+            <enableCondition>false</enableCondition>
+            <abortAllJob>true</abortAllJob>
+            <condition></condition>
+            <configs>
+              <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters plugin="parameterized-trigger@2.35.2">
+                <properties>GIT_REPO=https://github.com/Xilinx/meta-petalinux.git
+GIT_BRANCH=rel-v2018.1
+GIT_SUBDIR=${WORKSPACE}/meta-petalinux</properties>
+                <textParamValueOnNewLine>false</textParamValueOnNewLine>
+              </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+            </configs>
+            <killPhaseOnJobResultCondition>NEVER</killPhaseOnJobResultCondition>
+            <buildOnlyIfSCMChanges>false</buildOnlyIfSCMChanges>
+            <applyConditionOnlyIfNoSCMChanges>false</applyConditionOnlyIfNoSCMChanges>
+          </com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+          <com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+            <jobName>clone-layers</jobName>
+            <jobAlias>meta-qt5</jobAlias>
+            <currParams>false</currParams>
+            <aggregatedTestResults>false</aggregatedTestResults>
+            <exposedSCM>false</exposedSCM>
+            <disableJob>false</disableJob>
+            <parsingRulesPath></parsingRulesPath>
+            <maxRetries>0</maxRetries>
+            <enableRetryStrategy>false</enableRetryStrategy>
+            <enableCondition>false</enableCondition>
+            <abortAllJob>true</abortAllJob>
+            <condition></condition>
+            <configs>
+              <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters plugin="parameterized-trigger@2.35.2">
+                <properties>GIT_REPO=https://github.com/meta-qt5/meta-qt5.git
+GIT_BRANCH=rocko
+GIT_SUBDIR=${WORKSPACE}/meta-qt5</properties>
+                <textParamValueOnNewLine>false</textParamValueOnNewLine>
+              </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+            </configs>
+            <killPhaseOnJobResultCondition>FAILURE</killPhaseOnJobResultCondition>
+            <buildOnlyIfSCMChanges>false</buildOnlyIfSCMChanges>
+            <applyConditionOnlyIfNoSCMChanges>false</applyConditionOnlyIfNoSCMChanges>
+          </com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+          <com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+            <jobName>clone-layers</jobName>
+            <jobAlias>meta-xilinx</jobAlias>
+            <currParams>false</currParams>
+            <aggregatedTestResults>false</aggregatedTestResults>
+            <exposedSCM>false</exposedSCM>
+            <disableJob>false</disableJob>
+            <parsingRulesPath></parsingRulesPath>
+            <maxRetries>0</maxRetries>
+            <enableRetryStrategy>false</enableRetryStrategy>
+            <enableCondition>false</enableCondition>
+            <abortAllJob>true</abortAllJob>
+            <condition></condition>
+            <configs>
+              <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters plugin="parameterized-trigger@2.35.2">
+                <properties>GIT_REPO=https://github.com/Xilinx/meta-xilinx.git
+GIT_BRANCH=rel-v2018.1
+GIT_SUBDIR=${WORKSPACE}/meta-xilinx</properties>
+                <textParamValueOnNewLine>false</textParamValueOnNewLine>
+              </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+            </configs>
+            <killPhaseOnJobResultCondition>FAILURE</killPhaseOnJobResultCondition>
+            <buildOnlyIfSCMChanges>false</buildOnlyIfSCMChanges>
+            <applyConditionOnlyIfNoSCMChanges>false</applyConditionOnlyIfNoSCMChanges>
+          </com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+          <com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+            <jobName>clone-layers</jobName>
+            <jobAlias>meta-xilinx-tools</jobAlias>
+            <currParams>false</currParams>
+            <aggregatedTestResults>false</aggregatedTestResults>
+            <exposedSCM>false</exposedSCM>
+            <disableJob>false</disableJob>
+            <parsingRulesPath></parsingRulesPath>
+            <maxRetries>0</maxRetries>
+            <enableRetryStrategy>false</enableRetryStrategy>
+            <enableCondition>false</enableCondition>
+            <abortAllJob>true</abortAllJob>
+            <condition></condition>
+            <configs>
+              <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters plugin="parameterized-trigger@2.35.2">
+                <properties>GIT_REPO=https://github.com/Xilinx/meta-xilinx-tools.git
+GIT_BRANCH=rel-v2018.1
+GIT_SUBDIR=${WORKSPACE}/meta-xilinx-tools</properties>
+                <textParamValueOnNewLine>false</textParamValueOnNewLine>
+              </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+            </configs>
+            <killPhaseOnJobResultCondition>FAILURE</killPhaseOnJobResultCondition>
+            <buildOnlyIfSCMChanges>false</buildOnlyIfSCMChanges>
+            <applyConditionOnlyIfNoSCMChanges>false</applyConditionOnlyIfNoSCMChanges>
+          </com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+        </phaseJobs>
+        <continuationCondition>SUCCESSFUL</continuationCondition>
+        <executionType>SEQUENTIALLY</executionType>
+      </outer-class>
+    </com.tikal.jenkins.plugins.multijob.MultiJobBuilder_-MultiJobAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UpstreamCause>
+            <upstreamProject>Update-Yocto-Env (MasterJob)</upstreamProject>
+            <upstreamUrl>job/Update-Yocto-Env%20(MasterJob)/</upstreamUrl>
+            <upstreamBuild>5</upstreamBuild>
+            <upstreamCauses>
+              <hudson.model.Cause_-UserIdCause>
+                <userId>lhogan</userId>
+              </hudson.model.Cause_-UserIdCause>
+            </upstreamCauses>
+          </hudson.model.Cause_-UpstreamCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.envinject.EnvInjectPluginAction plugin="envinject@2.1.6"/>
+    <hudson.plugins.git.util.BuildData plugin="git@3.9.1">
+      <buildsByBranchName>
+        <entry>
+          <string>origin/rel-v2018.1</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@2.7.3">
+              <sha1>e7a6531bd8fc9ce5797be082c8478a2701c3766a</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>origin/rel-v2018.1</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>25</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
+          <string>origin/unit_tests_yocto_deploy_47</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@2.7.3">
+              <sha1>613a91bfec8c1b9f5f304339100e9b34846ca55e</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>origin/unit_tests_yocto_deploy_47</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision plugin="git-client@2.7.3">
+              <sha1 reference="../../marked/sha1"/>
+              <branches class="list">
+                <hudson.plugins.git.Branch reference="../../../marked/branches/hudson.plugins.git.Branch"/>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>21</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
+          <string>origin/rocko</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@2.7.3">
+              <sha1>682ad61c071a9710e9f9d8a32ab1b5f3c14953d1</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>origin/rocko</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision plugin="git-client@2.7.3">
+              <sha1 reference="../../marked/sha1"/>
+              <branches class="list">
+                <hudson.plugins.git.Branch reference="../../../marked/branches/hudson.plugins.git.Branch"/>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>24</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>${GIT_REPO}</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@3.9.1">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>origin/rel-v2018.1</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/home/jenkins/yocto-jenkins/poky</ws>
+    </hudson.plugins.git.GitTagAction>
+    <hudson.scm.SCMRevisionState_-None/>
+  </actions>
+  <queueId>31</queueId>
+  <timestamp>1537381699620</timestamp>
+  <startTime>1537381699627</startTime>
+  <result>SUCCESS</result>
+  <duration>602</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/home/jenkins/yocto-jenkins/poky</workspace>
+  <hudsonVersion>2.138.1</hudsonVersion>
+  <scm class="hudson.plugins.git.GitChangeLogParser" plugin="git@3.9.1">
+    <authorOrCommitter>false</authorOrCommitter>
+  </scm>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

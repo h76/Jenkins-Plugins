@@ -1,0 +1,107 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <com.tikal.jenkins.plugins.multijob.MultiJobParametersAction plugin="jenkins-multijob-plugin@1.31">
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>BASE_PATH</name>
+          <description></description>
+          <value>${WORKSPACE}/poky</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>DL_DIR</name>
+          <description></description>
+          <value>${WORKSPACE}/yocto_downloads</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>MACHINE</name>
+          <value>ultrasasmv-zynq7</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>BUILD</name>
+          <value>build-ultramv</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>BASE_PATH</string>
+        <string>DL_DIR</string>
+        <string>MACHINE</string>
+        <string>BUILD</string>
+      </parameterDefinitionNames>
+      <parameters class="java.util.Arrays$ArrayList" defined-in="com.tikal.jenkins.plugins.multijob.MultiJobParametersAction">
+        <a class="hudson.model.ParameterValue-array">
+          <hudson.model.StringParameterValue reference="../../../parameters/hudson.model.StringParameterValue"/>
+          <hudson.model.StringParameterValue reference="../../../parameters/hudson.model.StringParameterValue[2]"/>
+          <hudson.model.StringParameterValue reference="../../../parameters/hudson.model.StringParameterValue[3]"/>
+          <hudson.model.StringParameterValue reference="../../../parameters/hudson.model.StringParameterValue[4]"/>
+        </a>
+      </parameters>
+    </com.tikal.jenkins.plugins.multijob.MultiJobParametersAction>
+    <com.tikal.jenkins.plugins.multijob.MultiJobBuilder_-MultiJobAction plugin="jenkins-multijob-plugin@1.31">
+      <buildNumber>1</buildNumber>
+      <index>1</index>
+      <outer-class>
+        <phaseName>Configure Yocto (ultrasas-mv)</phaseName>
+        <phaseJobs>
+          <com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+            <jobName>configure-yocto</jobName>
+            <jobAlias>ultrasas-mv</jobAlias>
+            <currParams>false</currParams>
+            <aggregatedTestResults>false</aggregatedTestResults>
+            <exposedSCM>false</exposedSCM>
+            <disableJob>false</disableJob>
+            <parsingRulesPath></parsingRulesPath>
+            <maxRetries>0</maxRetries>
+            <enableRetryStrategy>false</enableRetryStrategy>
+            <enableCondition>true</enableCondition>
+            <abortAllJob>true</abortAllJob>
+            <condition>&quot;${EDIT_CONFIG_FILES}&quot; == &quot;true&quot;</condition>
+            <configs>
+              <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters plugin="parameterized-trigger@2.35.2">
+                <properties>MACHINE=ultrasasmv-zynq7
+BUILD=build-ultramv</properties>
+                <textParamValueOnNewLine>false</textParamValueOnNewLine>
+              </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+            </configs>
+            <killPhaseOnJobResultCondition>FAILURE</killPhaseOnJobResultCondition>
+            <buildOnlyIfSCMChanges>false</buildOnlyIfSCMChanges>
+            <applyConditionOnlyIfNoSCMChanges>false</applyConditionOnlyIfNoSCMChanges>
+          </com.tikal.jenkins.plugins.multijob.PhaseJobsConfig>
+        </phaseJobs>
+        <continuationCondition>SUCCESSFUL</continuationCondition>
+        <executionType>SEQUENTIALLY</executionType>
+      </outer-class>
+    </com.tikal.jenkins.plugins.multijob.MultiJobBuilder_-MultiJobAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UpstreamCause>
+            <upstreamProject>Build-ULTRASAS-MV (MasterJob)</upstreamProject>
+            <upstreamUrl>job/Build-ULTRASAS-MV%20(MasterJob)/</upstreamUrl>
+            <upstreamBuild>1</upstreamBuild>
+            <upstreamCauses>
+              <hudson.model.Cause_-UserIdCause>
+                <userId>lhogan</userId>
+              </hudson.model.Cause_-UserIdCause>
+            </upstreamCauses>
+          </hudson.model.Cause_-UpstreamCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.envinject.EnvInjectPluginAction plugin="envinject@2.1.6"/>
+  </actions>
+  <queueId>53</queueId>
+  <timestamp>1537462239871</timestamp>
+  <startTime>1537462239881</startTime>
+  <result>SUCCESS</result>
+  <duration>209</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/home/jenkins/yocto-jenkins</workspace>
+  <hudsonVersion>2.138.1</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

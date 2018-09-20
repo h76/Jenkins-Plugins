@@ -1,0 +1,88 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<com.tikal.jenkins.plugins.multijob.MultiJobBuild plugin="jenkins-multijob-plugin@1.31">
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>EDIT_CONFIG_FILES</name>
+          <description></description>
+          <value>false</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>BUILD</name>
+          <description></description>
+          <value>true</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>START_PKG_SERVER</name>
+          <description></description>
+          <value>true</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>EDIT_CONFIG_FILES</string>
+        <string>BUILD</string>
+        <string>START_PKG_SERVER</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>lhogan</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.envinject.EnvInjectPluginAction plugin="envinject@2.1.6"/>
+    <org.jenkinsci.plugins.envinject.EnvInjectBuilderContributionAction plugin="envinject@2.1.6"/>
+    <org.jenkinsci.plugins.envinject.EnvInjectBuilderContributionAction plugin="envinject@2.1.6"/>
+    <org.jenkinsci.plugins.envinject.EnvInjectBuilderContributionAction plugin="envinject@2.1.6"/>
+    <org.jenkinsci.plugins.envinject.EnvInjectBuilderContributionAction plugin="envinject@2.1.6"/>
+    <org.jenkinsci.plugins.envinject.EnvInjectBuilderContributionAction plugin="envinject@2.1.6"/>
+    <com.tikal.jenkins.plugins.multijob.MultiJobResumeBuild>
+      <run class="com.tikal.jenkins.plugins.multijob.MultiJobBuild" reference="../../.."/>
+    </com.tikal.jenkins.plugins.multijob.MultiJobResumeBuild>
+  </actions>
+  <queueId>48</queueId>
+  <timestamp>1537458622113</timestamp>
+  <startTime>1537458622123</startTime>
+  <result>FAILURE</result>
+  <duration>2097394</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/home/jenkins/yocto-jenkins/poky</workspace>
+  <hudsonVersion>2.138.1</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+  <subBuilds class="java.util.concurrent.CopyOnWriteArrayList">
+    <com.tikal.jenkins.plugins.multijob.MultiJobBuild_-SubBuild>
+      <parentJobName>Build-USASSV (MasterJob)</parentJobName>
+      <parentBuildNumber>2</parentBuildNumber>
+      <jobName>build-yocto</jobName>
+      <jobAlias>usassv</jobAlias>
+      <buildNumber>7</buildNumber>
+      <phaseName>Build Yocto (usassv)</phaseName>
+      <result>FAILURE</result>
+      <icon>red.png</icon>
+      <duration>34 min</duration>
+      <url>job/build-yocto/7/</url>
+      <retry>false</retry>
+      <aborted>false</aborted>
+      <buildID>build-yocto#7</buildID>
+    </com.tikal.jenkins.plugins.multijob.MultiJobBuild_-SubBuild>
+  </subBuilds>
+  <changeSets>
+    <run class="com.tikal.jenkins.plugins.multijob.MultiJobBuild" reference="../.."/>
+    <build class="com.tikal.jenkins.plugins.multijob.MultiJobBuild" reference="../.."/>
+  </changeSets>
+  <subBuildsMap>
+    <entry>
+      <string>Build Yocto (usassv)build-yocto7</string>
+      <com.tikal.jenkins.plugins.multijob.MultiJobBuild_-SubBuild reference="../../../subBuilds/com.tikal.jenkins.plugins.multijob.MultiJobBuild_-SubBuild"/>
+    </entry>
+  </subBuildsMap>
+</com.tikal.jenkins.plugins.multijob.MultiJobBuild>

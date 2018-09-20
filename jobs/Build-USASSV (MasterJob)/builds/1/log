@@ -1,0 +1,10 @@
+Started by user [8mha:////4J4kci7bVE7VxIi01MHG3nd8n1XMfnBAlWUkb7RxEqJmAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgYe/dLi1CL9nIz89MQ8AAugMCbBAAAA[0madmin
+[EnvInject] - Loading node environment variables.
+Building in workspace /home/jenkins/yocto-jenkins/poky
+    >> Job status: [configure-yocto] the 'build only if scm changes' feature is disabled.
+Triggering configure-yocto (ussasv). Condition was evaluated to true.
+Starting build job [8mha:////4BzgKkXueO8kNXq+VOoMw310Zw5uoETah9CxFhW4Wtt7AAAAlR+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMiQKGEQ1c/KT9IHqk3LTC8tStWtzE8uydcHACSchdeaAAAA[0mconfigure-yocto (ussasv).
+Finished Build : [8mha:////4HmUJpOMh1fyjaSRFHe7aYoT+G2G9KIF8uHMrf9yEXXHAAAAmB+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMhgKmGQ0M/KT9IHqk3LTC8tStWtzE8uyde30NcHABy+MHSdAAAA[0m#8 of Job : [8mha:////4BzgKkXueO8kNXq+VOoMw310Zw5uoETah9CxFhW4Wtt7AAAAlR+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMiQKGEQ1c/KT9IHqk3LTC8tStWtzE8uydcHACSchdeaAAAA[0mconfigure-yocto (ussasv) with status : [8mha:////4La0E9rzpZrfPeqH9W/F9EFkvP5flfLn/+A56aEy/RuTAAAAmh+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMhgL2GQ18/KT9IHqk3LTC8tStWtzE8uyde30NeHagcAu5JQDKQAAAA=[0mSUCCESS
+    >> Job status: [build-yocto] the 'build only if scm changes' feature is disabled.
+Skipping build-yocto (usassv). Condition was evaluated to false.
+Finished: SUCCESS

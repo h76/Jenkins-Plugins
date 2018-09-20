@@ -1,0 +1,25 @@
+Started by upstream project "[8mha:////4B4Jd4mi0vDiUVnqnBnS6i7b0FqJn5/j4oOlMVtY4rajAAAAsB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyZEgYV/az8JP3QgpTEklTdyPzkknxd17wyVSMDDd/E4pLUIq/8JE19AOybJGnZAAAA[0mUpdate-Yocto-Env (MasterJob)" build number [8mha:////4OieR17djUwXVAkuz87NVcBIpt6ku+YS89vS1ITeU5SRAAAAsB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBlX9rPwk/dCClMSSVN3I/OSSfF3XvDJVIwMN38TiktQir/wkTX1TADcmzinaAAAA[0m5
+originally caused by:
+ Started by user [8mha:////4J4kci7bVE7VxIi01MHG3nd8n1XMfnBAlWUkb7RxEqJmAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgYe/dLi1CL9nIz89MQ8AAugMCbBAAAA[0madmin
+[EnvInject] - Loading node environment variables.
+Building in workspace /home/jenkins/yocto-jenkins/poky
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git config remote.origin.url https://github.ms.northgrum.com/undersea/meta-ngus.git # timeout=10
+Fetching upstream changes from https://github.ms.northgrum.com/undersea/meta-ngus.git
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git --version # timeout=10
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git fetch --tags --progress https://github.ms.northgrum.com/undersea/meta-ngus.git +refs/heads/*:refs/remotes/origin/*
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git rev-parse origin/unit_tests_yocto_deploy_47^{commit} # timeout=10
+Checking out Revision 613a91bfec8c1b9f5f304339100e9b34846ca55e (origin/unit_tests_yocto_deploy_47)
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git config core.sparsecheckout # timeout=10
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git checkout -f 613a91bfec8c1b9f5f304339100e9b34846ca55e
+Commit message: "#47 Update USASSRCREV"
+ > /home/jenkins/jenkins-2.138.1-0/git/bin/git rev-list --no-walk 613a91bfec8c1b9f5f304339100e9b34846ca55e # timeout=10
+[poky] $ /bin/sh -xe /home/jenkins/jenkins-2.138.1-0/apache-tomcat/temp/jenkins2606658569504979135.sh
++ echo https://github.ms.northgrum.com/undersea/meta-ngus.git
+https://github.ms.northgrum.com/undersea/meta-ngus.git
++ echo unit_tests_yocto_deploy_47
+unit_tests_yocto_deploy_47
++ echo /home/jenkins/yocto-jenkins/poky/meta-ngus
+/home/jenkins/yocto-jenkins/poky/meta-ngus
+Finished: SUCCESS
