@@ -1,0 +1,95 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>BASE_PATH</name>
+          <description></description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>${WORKSPACE}/poky</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>DL_DIR</name>
+          <description></description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>${WORKSPACE}/yocto_downloads</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>MACHINE</name>
+          <description></description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>usasmv-zynq7</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>BUILD</name>
+          <description></description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>build-mv</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>/home/jenkins/yocto-jenkins</customWorkspace>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+
+mkdir yocto_downloads
+
+cd ${BASE_PATH}
+source oe-init-build-env ${BUILD}
+cd conf
+
+sed -i -e &quot;s/MACHINE ??= \&quot;qemux86\&quot;/MACHINE ??= \&quot;${MACHINE}\&quot;/&quot; local.conf
+sed -i -e &quot;s|#DL_DIR.*|DL_DIR ?= \&quot;$DL_DIR\&quot;|&quot; local.conf
+
+sed -i &apos;232i \ &apos; local.conf
+sed -i &apos;233i XILINX_SDK_TOOLCHAIN = &quot;/opt/Xilinx/SDK/2017.4&quot;&apos; local.conf
+sed -i &apos;234i XILINX_VER_MAIN = &quot;2017.4&quot;&apos; local.conf
+
+sed -i &quot;12i\ \ ${BASE_PATH}/meta-xilinx/meta-xilinx-bsp \\\ \\ &quot; bblayers.conf
+sed -i &quot;13i\ \ ${BASE_PATH}/meta-xilinx/meta-xilinx-contrib \\\ \\ &quot; bblayers.conf
+sed -i &quot;14i\ \ ${BASE_PATH}/meta-xilinx-tools \\\ \\ &quot; bblayers.conf
+sed -i &quot;15i\ \ ${BASE_PATH}/meta-qt5 \\\ \\ &quot; bblayers.conf
+sed -i &quot;16i\ \ ${BASE_PATH}/meta-openembedded/meta-perl \\\ \\ &quot; bblayers.conf
+sed -i &quot;17i\ \ ${BASE_PATH}/meta-openembedded/meta-python \\\ \\ &quot; bblayers.conf
+sed -i &quot;18i\ \ ${BASE_PATH}/meta-openembedded/meta-filesystems \\\ \\ &quot; bblayers.conf
+sed -i &quot;19i\ \ ${BASE_PATH}/meta-openembedded/meta-gnome \\\ \\ &quot; bblayers.conf
+sed -i &quot;20i\ \ ${BASE_PATH}/meta-openembedded/meta-multimedia \\\ \\ &quot; bblayers.conf
+sed -i &quot;21i\ \ ${BASE_PATH}/meta-openembedded/meta-networking \\\ \\ &quot; bblayers.conf
+sed -i &quot;22i\ \ ${BASE_PATH}/meta-openembedded/meta-webserver \\\ \\ &quot; bblayers.conf
+sed -i &quot;23i\ \ ${BASE_PATH}/meta-openembedded/meta-xfce \\\ \\ &quot; bblayers.conf
+sed -i &quot;24i\ \ ${BASE_PATH}/meta-openembedded/meta-initramfs \\\ \\ &quot; bblayers.conf
+sed -i &quot;25i\ \ ${BASE_PATH}/meta-openembedded/meta-oe \\\ \\ &quot; bblayers.conf
+sed -i &quot;26i\ \ ${BASE_PATH}/meta-petalinux \\\ \\ &quot; bblayers.conf
+sed -i &quot;27i\ \ ${BASE_PATH}/meta-ngus \\\ \\ &quot; bblayers.conf
+
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
