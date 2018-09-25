@@ -112,9 +112,7 @@
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.55">
     <script>pipeline {
     agent any
-    options {
-        checkoutToSubdirectory(&apos;usas&apos;)
-    }
+    
     environment {
         MACHINE = &quot;${MACHINE}&quot;
         PROJ_CREATE = &quot;${PROJ_CREATE}&quot;
@@ -149,37 +147,37 @@
         stage(&apos;Project Synthesis&apos;) {
             steps {
                 echo &apos;Project Synthesis...&apos;
-                sh &quot;./jenkins_scripts/proj_synth.sh ${MACHINE} ${PROJ_CREATE}&quot;
+                sh &quot;./jenkins_scripts/proj_synth.sh ${MACHINE} ${PROJ_SYNTH}&quot;
             }
         }
         stage(&apos;Opt Design&apos;) {
             steps {
                 echo &apos;Opt Design...&apos;
-                sh &quot;./jenkins_scripts/opt_design.sh ${MACHINE} ${PROJ_CREATE}&quot;
+                sh &quot;./jenkins_scripts/opt_design.sh ${MACHINE} ${OPT_DESIGN}&quot;
             }
         }
         stage(&apos;Place Design&apos;) {
             steps {
                 echo &apos;Place Design...&apos;
-                sh &quot;./jenkins_scripts/place_design.sh ${MACHINE} ${PROJ_CREATE}&quot;
+                sh &quot;./jenkins_scripts/place_design.sh ${MACHINE} ${PLACE_DESIGN}&quot;
             }
         }
         stage(&apos;Physical Synthesis&apos;) {
             steps {
                 echo &apos;Physical Synthesis...&apos;
-                sh &quot;./jenkins_scripts/phys_synth.sh ${MACHINE} ${PROJ_CREATE}&quot;
+                sh &quot;./jenkins_scripts/phys_synth.sh ${MACHINE} ${PHYS_SYNTH}&quot;
             }
         }
         stage(&apos;Route Design&apos;) {
             steps {
                 echo &apos;Route Design...&apos;
-                sh &quot;./jenkins_scripts/route_design.sh ${MACHINE} ${PROJ_CREATE}&quot;
+                sh &quot;./jenkins_scripts/route_design.sh ${MACHINE} ${ROUTE_DESIGN}&quot;
             }
         }
         stage(&apos;Bitstream Generation&apos;) {
             steps {
                 echo &apos;Bitstream Generation...&apos;
-                sh &quot;./jenkins_scripts/bit_gen.sh ${MACHINE} ${PROJ_CREATE}&quot;
+                sh &quot;./jenkins_scripts/bit_gen.sh ${MACHINE} ${BIT_GEN}&quot;
             }
         }
     }
