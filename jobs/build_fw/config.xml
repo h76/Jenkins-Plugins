@@ -1,5 +1,6 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
+  <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties/>
@@ -34,10 +35,19 @@
       <command>#!/bin/bash
 
 cd usas/ultrasas_mv/tcl
-source /opt/Xilinx/Vivavdo/2017.4/settings64.sh
-#vivado -mode batch -source create_project_and_build.tcl -log ${WORKSPACE}/usas/ultrasas_mv/ultramv_log -journal ${WORKSPACE}/usas/ultrasas_mv/ultramv_journal</command>
+source /opt/Xilinx/Vivado/2017.4/settings64.sh
+#vivado -mode batch -source create_project_and_build.tcl -log ${WORKSPACE}/usas/ultrasas_mv/ultramv_log -journal ${WORKSPACE}/usas/ultrasas_mv/ultramv_journal
+vivado -mode batch -source create_project_and_build.tcl</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.plugins.logparser.LogParserPublisher plugin="log-parser@2.0">
+      <unstableOnWarning>false</unstableOnWarning>
+      <failBuildOnError>true</failBuildOnError>
+      <showGraphs>false</showGraphs>
+      <parsingRulesPath>/home/jenkins/parsing_rules/fw_parsing</parsingRulesPath>
+      <useProjectRule>false</useProjectRule>
+    </hudson.plugins.logparser.LogParserPublisher>
+  </publishers>
   <buildWrappers/>
 </project>
